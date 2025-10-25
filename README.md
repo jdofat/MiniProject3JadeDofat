@@ -6,7 +6,14 @@
  
 ## Description
 
-This project will be using Flask to deploy a small web app of your choice. The goal here is to come up with a small web application that meets the requirements 
+This project will be using Flask to deploy a small web app called MyMacro, which helps users track their daily calorie and macronutrient intake.
+You can navigate through six pages:
+1. Home
+2. About: Learn about the site/service
+3. Sign Up: Sign up for an account using email and password
+4. Log In: Sign into your account
+5. Log: Log a meal
+6. View Logs: View previously logged meals
 
 ### Dependencies
  
