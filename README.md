@@ -15,6 +15,8 @@ You can navigate through six pages:
 5. Log: Log a meal
 6. View Logs: View previously logged meals
 
+The site uses HTML, CSS, Python, and ___
+
 ### Dependencies
  
 This project requires:
