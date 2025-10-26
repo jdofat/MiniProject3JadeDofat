@@ -20,11 +20,22 @@
         <img src="cherry.jpg" alt="Cherry">
              <br>
        <h2>Log a Meal</h2>
+   
+    <br>
+    {% if message %}
+      <p>{{ message }}</p>
+    {% endif %}
     <br>
 
-
-        <h2>View My Logs</h2>
-    <br>
+    <form method="POST">
+    
+     <label>Meal name:</label><br>
+      <input type="text" name="meal" required><br><br>
+     <label>Calories:</label><br>
+      <input type="number" name="calories" required><br><br>
+     <button type="submit">Submit</button>
+   
+    </form>
        
         <a href="index.html">
             <button type="button">Back to Home</button>
