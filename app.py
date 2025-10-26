@@ -3,7 +3,10 @@
 from flask import Flask, render_template, request
 from models import get_db_connection
 
+
 app = Flask(__name__)
+init_db()
+
 
 # for homepage-
 @app.route('/')
@@ -44,7 +47,7 @@ def login():
         if user:
             message = "You are Logged In"
         else:
-            message = "Oh No, Invalid!"
+            message = "Invalid! This is awkward haha.."
         return render_template('login.html', message=message)
     return render_template('login.html')
 
@@ -57,14 +60,16 @@ def login():
 @app.route('/log', methods=['GET', 'POST'])
 def log():
     if request.method == 'POST':
-        meal = request.form['meal']
-        calories = request.form['calories']
-        
-         # Print in term and show on screen the meal user just logged:
-        message = f"Meal logged: {meal} ({calories} calories)"
-        print(message)
-        return render_template('log.html', message=message)
-    return render_template('log.html')
+    meal = request.form['meal']
+    calories = request.form['calories']
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute("INSERT INTO meals (user_id, meal, calories) VALUES (?, ?, ?)", (1, meal, calories))
+    conn.commit()
+    conn.close()
+    message = f"Meal logged: {meal} ({calories} calories)"
+    print(message)
+    return render_template('log.html', message=message)
 
 # LOGS: shows list of all meals saved in the database-
 
