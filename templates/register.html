@@ -14,24 +14,31 @@
         <header>
             <h1 class="welcome">sign up<h1 class= "title">MyMacro</h1></h1>
             <h2><i>Eat good, Feel good.</i></h2>
-<br>
-        <nav>
-            <ul>
-                <li>
-                    <a href="login.html">
-                        <button type="button">Sign Up</button>
-                    </a>
-                </li>
-            </ul>
-        </nav>
         </header>
 <br><br>
     <main>
-        <img src="cherry.jpg" alt="Cherry">
-             <br>
+        <img src="cherry.jpg" alt="Cherry"><br>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    <form method="POST">
+      
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" name="password" required><br><br>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+      
+        <br>
         <h3><i>Already have an account?</i></h3>
        
-        <a href="index.html">
+        <a href="login.html">
             <button type="button">Log In</button>
         </a>
         <br><br>
