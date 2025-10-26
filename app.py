@@ -1,8 +1,7 @@
 # Flask setup- imports, routes, and all website pages:
 
 from flask import Flask, render_template, request
-from models import get_db_connection
-
+from models import get_db_connection, init_db
 
 app = Flask(__name__)
 init_db()
@@ -60,7 +59,7 @@ def login():
 @app.route('/log', methods=['GET', 'POST'])
 def log():
     if request.method == 'POST':
-    meal = request.form['meal']
+        meal = request.form['meal']
     calories = request.form['calories']
     conn = get_db_connection()
     cur = conn.cursor()
