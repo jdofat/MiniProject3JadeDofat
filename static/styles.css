@@ -98,7 +98,7 @@ img {
 }
 
 
-label {
+form, label, input {
     font-family: 'Poppins', sans-serif;
     font-weight: normal;
 }
