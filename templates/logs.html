@@ -21,7 +21,31 @@
     <main>
         <img src="cherry.jpg" alt="Cherry">
              <br>
-       
+
+      {% if meals %}
+        <table>
+            
+            <tr>
+                <th>Meal</th>
+                <th>Calories</th>
+            </tr>
+            
+            {% for meal in meals %}
+           
+            <tr>
+                <td>{{ meal[0] }}</td>
+                <td>{{ meal[1] }}</td>
+            </tr>
+          
+            {% endfor %}
+        
+        </table>
+      
+    {% else %}
+        <p>no meals yet</p>
+    {% endif %}
+      
+       <br>
         <a href="index.html">
             <button type="button">Back to Home</button>
         </a>
