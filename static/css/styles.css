@@ -83,11 +83,11 @@ h3 {
 button {
     font-family: 'Poppins', sans-serif;
     font-weight: normal;
-    background-color: transparent;   /* no fill */
-    border: 3px solid rgb(133, 36, 36);           /* red outline */
-    color: rgb(56, 8, 8);                      /* red text */
-    border-radius: 12px;             /* rounded corners */
-    padding: 8px 16px;               /* spacing inside button */
+    background-color: transparent;   
+    border: 3px solid rgb(133, 36, 36);      
+    color: rgb(56, 8, 8);                   
+    border-radius: 12px;         
+    padding: 8px 16px;               
     cursor: pointer;
 }
 
@@ -95,4 +95,10 @@ img {
     max-width: 80px;
     height: auto;    
     margin-top: 0;
+}
+
+
+label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
 }
