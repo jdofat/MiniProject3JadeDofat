@@ -102,3 +102,16 @@ form, label, input {
     font-family: 'Poppins', sans-serif;
     font-weight: normal;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
