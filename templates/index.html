@@ -23,7 +23,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="login.html">
+                    <a href="{{ url_for('login') }}">
                         <button type="button">Log In</button>
                     </a>
                 </li>
@@ -31,8 +31,7 @@
                 <p> or </p>
 
                 <li>
-                    <a href="register.html">
-                        <button type="button">Sign Up</button>
+                    <a href="{{ url_for('register') }}"><button type="button">Sign Up</button></a>
                     </a>
                 </li>
             </ul>
@@ -45,9 +44,10 @@
        <h2>About MyMacro:</h2>
         <h3><i>Track meals, Meet goals.</i></h3>
        
-        <a href="macros.html">
-            <button type="button">Learn More</button>
-        </a>
+        <a href="{{ url_for('macros') }}"><button type="button">Learn More</button></a>
+<br>
+        <a href="{{ url_for('home') }}"><button type="button">Back to Home</button></a>
+
 
     </main>
 
