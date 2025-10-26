@@ -15,11 +15,15 @@ You can navigate through six pages:
 5. Log: Log a meal
 6. View Logs: View previously logged meals
 
-The site uses HTML, CSS, Python, and ___
+The site uses HTML, CSS, Python, Flask, and SQLite.
 
 ### Dependencies
  
 This project requires:
+- Python
+- Flask
+- SQLite
+- Bootstrap
 
 ### Installing
 
@@ -33,10 +37,19 @@ Clone the repo:
 git clone https://github.com/jdofat/MiniProject3JadeDofat.git
 cd MiniProject3JadeDofat
 
+pip install -r requirements.txt
+
 ### Execution:
 
 How to initialize the database:
+
+python
+>>> from models import init_db
+>>> init_db()
+>>> exit()
+
 How to run the development server for this project:
+python app.py
  
 ## Authors
  
